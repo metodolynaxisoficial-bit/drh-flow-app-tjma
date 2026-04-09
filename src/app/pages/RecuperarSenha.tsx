@@ -4,7 +4,8 @@ import { Button } from '../components/ui/button';
 import { Input } from '../components/ui/input';
 import { Alert } from '../components/ui/alert';
 import { Shield, User, Mail, Lock, CheckCircle2, ArrowRight } from 'lucide-react';
-import logoImage from 'figma:asset/372d348765917fdbc7e4e3f5a47453100f8a65c2.png';
+// TODO: arquivo não encontrado — verificar manualmente
+const logoImage = '';
 
 type Step = 'identification' | 'code' | 'newPassword' | 'success';
 
