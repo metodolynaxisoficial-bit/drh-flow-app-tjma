@@ -1,0 +1,289 @@
+═══════════════════════════════════════════════════════════════════════
+  💻 COMO BAIXAR E INSTALAR O DRH FLOW NO SEU COMPUTADOR
+═══════════════════════════════════════════════════════════════════════
+
+📌 OPÇÃO MAIS FÁCIL E RÁPIDA ✅
+
+═══════════════════════════════════════════════════════════════════════
+  MÉTODO 1: INSTALAR COMO APP DO NAVEGADOR (PWA)
+═══════════════════════════════════════════════════════════════════════
+
+Este é o método MAIS RÁPIDO e NÃO precisa de instaladores complexos!
+
+🪟 WINDOWS (Chrome ou Edge):
+───────────────────────────────────────────────────────────────────────
+
+1. Inicie o servidor:
+   - Abra o terminal na pasta do projeto
+   - Digite: npm run dev
+   - Aguarde iniciar
+
+2. Abra o navegador Chrome ou Edge
+
+3. Acesse: http://localhost:3000
+
+4. Faça login no sistema
+
+5. Clique no ícone de INSTALAÇÃO que aparece na barra de endereço
+   (ícone de computador com seta para baixo)
+   
+   OU
+   
+   Clique nos 3 pontinhos (⋮) > Instalar DRH Flow
+
+6. Clique em "Instalar"
+
+7. PRONTO! O app aparecerá:
+   ✅ No Menu Iniciar
+   ✅ Na área de trabalho (se marcou a opção)
+   ✅ Como um aplicativo normal do Windows
+
+8. Para abrir: Basta clicar no ícone do DRH Flow no Menu Iniciar!
+
+🍎 macOS (Safari ou Chrome):
+───────────────────────────────────────────────────────────────────────
+
+CHROME:
+1. Abra Chrome
+2. Acesse: http://localhost:3000
+3. Chrome > Mais ferramentas > Instalar DRH Flow
+4. Confirme
+5. O app aparecerá no Launchpad e Aplicativos
+
+SAFARI:
+1. Abra Safari
+2. Acesse: http://localhost:3000
+3. Clique em Compartilhar (ícone de quadrado com seta)
+4. Role e clique em "Adicionar à Dock"
+5. O ícone aparecerá no Dock
+
+🐧 LINUX (Chrome/Firefox):
+───────────────────────────────────────────────────────────────────────
+
+1. Abra Chrome
+2. Acesse: http://localhost:3000
+3. Menu (⋮) > Mais ferramentas > Criar atalho
+4. Marque "Abrir como janela"
+5. Clique em "Criar"
+6. PRONTO!
+
+═══════════════════════════════════════════════════════════════════════
+  MÉTODO 2: APP DESKTOP COMPLETO (ELECTRON)
+═══════════════════════════════════════════════════════════════════════
+
+Para criar um instalador .exe (Windows), .dmg (Mac) ou .AppImage (Linux):
+
+🪟 WINDOWS:
+───────────────────────────────────────────────────────────────────────
+
+1. Abra PowerShell ou CMD na pasta do projeto
+
+2. Execute o script automático:
+   scripts\install-desktop.bat
+
+3. Aguarde o processo (pode levar 5-10 minutos)
+
+4. Quando terminar, o instalador estará em:
+   release\DRH Flow - TJMA Setup 1.0.0.exe
+
+5. Execute o instalador
+
+6. Siga o assistente de instalação
+
+7. PRONTO! O app estará instalado em:
+   C:\Program Files\DRH Flow - TJMA
+
+8. Para abrir: Menu Iniciar > DRH Flow - TJMA
+
+🍎 macOS / 🐧 LINUX:
+───────────────────────────────────────────────────────────────────────
+
+1. Abra Terminal na pasta do projeto
+
+2. Dê permissão ao script:
+   chmod +x scripts/install-desktop.sh
+
+3. Execute:
+   ./scripts/install-desktop.sh
+
+4. Aguarde o processo
+
+5. O instalador estará em:
+   Mac: release/DRH Flow - TJMA-1.0.0.dmg
+   Linux: release/drh-flow-tjma-1.0.0.AppImage
+
+6. Instale normalmente
+
+═══════════════════════════════════════════════════════════════════════
+  MÉTODO 3: EXECUTAR LOCALMENTE (SEM INSTALAR)
+═══════════════════════════════════════════════════════════════════════
+
+Se você só quer testar sem instalar:
+
+1. Abra o terminal na pasta do projeto
+
+2. Instale as dependências (primeira vez):
+   npm install
+
+3. Copie o vídeo da Artemis:
+   Copie C:\Users\ODONTOMED\Downloads\ARTEMIS.mp4
+   Para: public\videos\artemis-presentation.mp4
+
+4. Inicie o servidor:
+   npm run dev
+
+5. Abra o navegador em:
+   http://localhost:3000
+
+6. Faça login e use o sistema!
+
+7. Para parar: Pressione Ctrl+C no terminal
+
+═══════════════════════════════════════════════════════════════════════
+  ⚡ ATALHO DE TECLADO - CRIAR ATALHO NA ÁREA DE TRABALHO
+═══════════════════════════════════════════════════════════════════════
+
+🪟 WINDOWS:
+───────────────────────────────────────────────────────────────────────
+
+1. Clique direito na área de trabalho
+2. Novo > Atalho
+3. Cole este caminho:
+   "C:\Program Files\Google\Chrome\Application\chrome.exe" --app=http://localhost:3000
+4. Nome: DRH Flow - TJMA
+5. Concluir
+
+Agora você tem um ícone que abre o DRH Flow direto!
+
+═══════════════════════════════════════════════════════════════════════
+  📦 VERSÃO PORTÁTIL (LEVAR EM PEN DRIVE)
+═══════════════════════════════════════════════════════════════════════
+
+Para criar uma versão que funciona sem instalar:
+
+1. Execute:
+   npm run build
+
+2. Copie a pasta "dist" para onde quiser
+
+3. Crie um arquivo "iniciar.bat" (Windows):
+   
+   @echo off
+   start chrome.exe --app=index.html
+   
+4. Ou "iniciar.sh" (Linux/Mac):
+   
+   #!/bin/bash
+   python3 -m http.server 8080 &
+   open http://localhost:8080
+
+5. Execute o arquivo para abrir o app!
+
+═══════════════════════════════════════════════════════════════════════
+  🔍 VERIFICAR SE ESTÁ FUNCIONANDO
+═══════════════════════════════════════════════════════════════════════
+
+Após instalar, teste:
+
+✅ O app abre sem erros?
+✅ A tela de login aparece?
+✅ Consegue fazer login?
+✅ O Dashboard carrega?
+✅ O vídeo da Artemis aparece?
+✅ Os botões funcionam (WhatsApp, Telefone)?
+✅ Os módulos abrem?
+
+Se TUDO funcionar = INSTALAÇÃO COMPLETA! 🎉
+
+═══════════════════════════════════════════════════════════════════════
+  ❓ PROBLEMAS COMUNS
+═══════════════════════════════════════════════════════════════════════
+
+PROBLEMA: "npm não é reconhecido"
+SOLUÇÃO: Instale Node.js de https://nodejs.org/
+
+PROBLEMA: "Erro ao instalar dependências"
+SOLUÇÃO: Execute como administrador / sudo
+
+PROBLEMA: "Vídeo não aparece"
+SOLUÇÃO: Verifique se ARTEMIS.mp4 está em public/videos/
+
+PROBLEMA: "Tela branca"
+SOLUÇÃO: Abra DevTools (F12) e veja os erros no console
+
+PROBLEMA: "Porta 3000 em uso"
+SOLUÇÃO: Mude a porta ou feche o processo que está usando
+
+═══════════════════════════════════════════════════════════════════════
+  📊 REQUISITOS DO SISTEMA
+═══════════════════════════════════════════════════════════════════════
+
+MÍNIMO:
+• Windows 10 / macOS 10.13 / Ubuntu 18.04
+• 4 GB RAM
+• 500 MB espaço livre
+• Chrome 90+ ou Edge 90+
+
+RECOMENDADO:
+• Windows 11 / macOS 12+ / Ubuntu 22.04
+• 8 GB RAM
+• 1 GB espaço livre
+• Última versão do Chrome/Edge
+
+═══════════════════════════════════════════════════════════════════════
+  🎯 RESUMO - QUAL MÉTODO ESCOLHER?
+═══════════════════════════════════════════════════════════════════════
+
+1. QUER ALGO RÁPIDO?
+   → Use MÉTODO 1 (PWA - Instalar do navegador)
+   
+2. QUER UM APP "DE VERDADE" COM .EXE?
+   → Use MÉTODO 2 (Electron Desktop)
+   
+3. SÓ QUER TESTAR?
+   → Use MÉTODO 3 (npm run dev)
+
+═══════════════════════════════════════════════════════════════════════
+  ✅ CHECKLIST
+═══════════════════════════════════════════════════════════════════════
+
+Antes de instalar:
+☐ Node.js instalado
+☐ Projeto baixado
+☐ Vídeo ARTEMIS.mp4 copiado para public/videos/
+
+Após instalar:
+☐ App abre normalmente
+☐ Login funciona
+☐ Vídeo da Artemis carrega
+☐ Botões funcionam
+☐ Módulos abrem
+
+═══════════════════════════════════════════════════════════════════════
+  📞 PRECISA DE AJUDA?
+═══════════════════════════════════════════════════════════════════════
+
+Consulte a documentação completa em:
+• GUIA_INSTALACAO_DESKTOP.md
+
+Ou abra um issue no repositório do projeto.
+
+═══════════════════════════════════════════════════════════════════════
+
+🎉 PRONTO! AGORA VOCÊ TEM O DRH FLOW INSTALADO NO SEU COMPUTADOR!
+
+O aplicativo funcionará como um programa normal, com:
+✅ Ícone na área de trabalho
+✅ Atalho no Menu Iniciar / Dock
+✅ Janela própria (não precisa do navegador aberto)
+✅ Funciona offline após primeira carga (PWA)
+
+═══════════════════════════════════════════════════════════════════════
+
+DRH Flow - TJMA
+Sistema Integrado de Atendimento e Gestão Funcional
+🤖✨ Artemis - Assistente Virtual Inteligente
+
+© 2026 Tribunal de Justiça do Estado do Maranhão
+
+═══════════════════════════════════════════════════════════════════════

@@ -1,0 +1,206 @@
+═══════════════════════════════════════════════════════════════════════
+  🎥 GUIA RÁPIDO: INTEGRAÇÃO DO VÍDEO DA ARTEMIS NO DRH FLOW
+═══════════════════════════════════════════════════════════════════════
+
+📁 ARQUIVO RECEBIDO:
+   C:\Users\ODONTOMED\Downloads\ARTEMIS.mp4
+
+═══════════════════════════════════════════════════════════════════════
+
+🚀 PASSO 1: COPIAR O VÍDEO PARA O PROJETO
+═══════════════════════════════════════════════════════════════════════
+
+1.1) Abra a pasta raiz do seu projeto DRH Flow
+
+1.2) Navegue até a pasta: public/
+
+1.3) Crie uma nova pasta chamada: videos
+     Caminho final: public/videos/
+
+1.4) Copie o arquivo ARTEMIS.mp4 para dentro de public/videos/
+
+1.5) Renomeie o arquivo para: artemis-presentation.mp4
+     (ou mantenha como ARTEMIS.mp4, mas lembre-se do nome)
+
+✅ RESULTADO: public/videos/artemis-presentation.mp4
+
+═══════════════════════════════════════════════════════════════════════
+
+🔧 PASSO 2: ATUALIZAR O CÓDIGO
+═══════════════════════════════════════════════════════════════════════
+
+2.1) Abra o arquivo: src/app/pages/Dashboard.tsx
+
+2.2) Localize esta linha (aproximadamente linha 160):
+
+     <ArtemisVideoPanel 
+       onStartChat={handleStartArtemisChat}
+     />
+
+2.3) Adicione a propriedade videoUrl:
+
+     <ArtemisVideoPanel 
+       videoUrl="/videos/artemis-presentation.mp4"
+       onStartChat={handleStartArtemisChat}
+     />
+
+2.4) Salve o arquivo (Ctrl+S)
+
+✅ PRONTO! O vídeo está configurado.
+
+═══════════════════════════════════════════════════════════════════════
+
+🧪 PASSO 3: TESTAR
+═══════════════════════════════════════════════════════════════════════
+
+3.1) No terminal, execute:
+     npm run dev
+
+3.2) Abra o navegador em: http://localhost:3000
+
+3.3) Faça login no sistema
+
+3.4) Você verá o vídeo da Artemis no Dashboard, logo após a 
+     seção de boas-vindas
+
+3.5) Teste os controles:
+     • Clique em Play/Pause
+     • Clique em Mute/Unmute
+     • Clique em Fullscreen
+     • Clique em "Iniciar Atendimento"
+     • Clique em "Falar no WhatsApp"
+     • Clique em "Ligar para o RH"
+
+✅ Se tudo funcionar, a integração está completa!
+
+═══════════════════════════════════════════════════════════════════════
+
+❓ SE O VÍDEO NÃO APARECER
+═══════════════════════════════════════════════════════════════════════
+
+SOLUÇÃO 1: Verificar caminho
+- Certifique-se que o arquivo está em: public/videos/artemis-presentation.mp4
+- Verifique se o nome do arquivo está correto (sem espaços)
+
+SOLUÇÃO 2: Testar vídeo diretamente
+- Acesse no navegador: http://localhost:3000/videos/artemis-presentation.mp4
+- Se não reproduzir, o arquivo não está no lugar certo
+
+SOLUÇÃO 3: Limpar cache
+- Pare o servidor (Ctrl+C)
+- Delete a pasta .cache ou dist (se existir)
+- Reinicie: npm run dev
+
+SOLUÇÃO 4: Verificar console
+- Abra DevTools (F12)
+- Vá para aba "Console"
+- Veja se há erros relacionados ao vídeo
+
+═══════════════════════════════════════════════════════════════════════
+
+📱 TESTAR EM MOBILE
+═══════════════════════════════════════════════════════════════════════
+
+1) Descubra o IP do seu computador:
+   Windows: ipconfig
+   Mac/Linux: ifconfig
+   
+2) Procure algo como: 192.168.1.X
+
+3) No celular (mesma rede Wi-Fi):
+   Acesse: http://192.168.1.X:3000
+
+4) Faça login e teste o vídeo
+
+✅ Deve funcionar em iOS e Android
+
+═══════════════════════════════════════════════════════════════════════
+
+🎨 SE QUISER USAR NOME DIFERENTE
+═══════════════════════════════════════════════════════════════════════
+
+Se você manteve o nome ARTEMIS.mp4 (sem renomear):
+
+Atualize o código para:
+
+<ArtemisVideoPanel 
+  videoUrl="/videos/ARTEMIS.mp4"
+  onStartChat={handleStartArtemisChat}
+/>
+
+═══════════════════════════════════════════════════════════════════════
+
+🌐 OPÇÃO: HOSPEDAR EM CDN (AVANÇADO)
+═══════════════════════════════════════════════════════════════════════
+
+Se quiser melhor performance, hospede o vídeo em um CDN:
+
+1) Upload para Cloudflare, Bunny CDN, AWS, etc.
+
+2) Obtenha a URL pública
+
+3) Atualize o código:
+
+   <ArtemisVideoPanel 
+     videoUrl="https://cdn.tjma.jus.br/videos/artemis.mp4"
+     onStartChat={handleStartArtemisChat}
+   />
+
+═══════════════════════════════════════════════════════════════════════
+
+✨ RESUMO
+═══════════════════════════════════════════════════════════════════════
+
+ESTRUTURA FINAL:
+
+drh-flow/
+├── public/
+│   └── videos/
+│       └── artemis-presentation.mp4  ← VÍDEO AQUI
+└── src/
+    └── app/
+        └── pages/
+            └── Dashboard.tsx          ← CÓDIGO ATUALIZADO
+
+CÓDIGO EM Dashboard.tsx:
+
+<ArtemisVideoPanel 
+  videoUrl="/videos/artemis-presentation.mp4"
+  onStartChat={handleStartArtemisChat}
+/>
+
+TESTE:
+npm run dev → http://localhost:3000 → Login → Ver vídeo
+
+═══════════════════════════════════════════════════════════════════════
+
+📞 CONTATOS CONFIGURADOS NO SISTEMA
+═══════════════════════════════════════════════════════════════════════
+
+WhatsApp: (98) 3255-2395
+Telefone: (98) 3255-2395
+
+✅ Ambos funcionam ao clicar nos botões
+
+═══════════════════════════════════════════════════════════════════════
+
+🎉 PRONTO!
+═══════════════════════════════════════════════════════════════════════
+
+O vídeo institucional da Artemis está integrado ao DRH Flow!
+
+O sistema agora apresenta:
+✅ Vídeo institucional profissional
+✅ Player completo com controles
+✅ Botões de ação funcionais
+✅ Integração WhatsApp ativa
+✅ Integração telefônica ativa
+✅ Design premium institucional
+✅ Responsivo (iOS, Android, Web)
+
+═══════════════════════════════════════════════════════════════════════
+
+Desenvolvido com ❤️ para o TJMA | DRH Flow © 2026
+🤖✨ Artemis - Assistente Virtual Inteligente
+
+═══════════════════════════════════════════════════════════════════════
